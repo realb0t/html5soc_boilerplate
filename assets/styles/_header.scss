@@ -1,0 +1,18 @@
+header {
+  .title {
+    @include clearfix;
+
+    .logo {
+      float: left;
+    }
+  }
+
+  .navigation.top {
+    @include clearfix;
+
+    a {
+      float: left;
+      margin: 10px;
+    }
+  }
+}

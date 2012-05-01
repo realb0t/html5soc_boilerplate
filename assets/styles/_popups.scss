@@ -1,0 +1,16 @@
+section.popups {
+
+  .popup_window {
+    @include popup_transparency($popup_width, $popup_margins);
+  }
+
+  .stub {
+    z-index: 101;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+
+}

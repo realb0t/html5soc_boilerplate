@@ -1,0 +1,67 @@
+* 1) Рисование
+* 2) Текст
+* 3) Представление светлячка - в виде рисунков или веркторных кружков
+* 4) Полет светлячков
+* 5) Заполнение форм светлячками
+* 6) Сохранение рисунка
+* 7) Инициализация пользователя и друзей
+* 7.1) Добавить в попап друзей и сделать возможность выбора при отправке 
+* 7.1.1) Сделать уже выбранного пользователя (при ответи)
+7.1.2) Сделать нормальный пол
+* 7.1.3) Поправить верстку еа входящих и исходящих, сделать применение друзей
+7.2) Рефакторинг Social.Api - сделать простым наследованием
+7.3) Инициализация пользователя на сервер
+7.4) Переопределить для коллекции друзей fetch
+8) Оплата
+9) Туториал
+10) Сделать оптимизацию отрисовки (полет к ближнему)
+* 11) Сохранение открытки
+* 12) Сделать сообщение о неподдерживаемом браузере
+* 13) Прелоадер
+* 14) Прекомпиляция JS
+15) Оптимизация на KinectJS
+16) Оптимизация загрузчика JS в один файл
+17) отправка уведомления и переход на открытку
+18) Страницв просмотра рисунка
+
+* 29) Сделать переключение верхнего меню
+# 20) Сделать сохранение кружков текста
+# 21) Сделать вывод кружков текста и кружков рисунка
+* 22) Производить парсинг текста на страницы рисования, чтобы сохранять в модели
+* 23) Сделать либу готовности элемента (по интервалу)
+24) Переход на просмотр со списка исходящих и входящих
+25) Страница просмотра поздравления с записью о просмотре, если браузер поддерживается и записью ошибки если нет (если уже смотрели не отправлять запрос на сервер)
+26) Сделать флешку просмотра поздравления, если браузер не поддерживается
+27) Сделать скринкаст с использованием приложения (на страницу ошибки браузера)
+
+
+-------------- БАГИ
+
+* 1) Текст после предпросмотра дублируется
+* 2) Не верная сортировка в списке входящих (не в ту сторону)
+* 3) много попапов при сохранении рисунка (не отправленные)
+* 4) ПОсле перехода на другую страницу превью не работает
+5) Если текст стереть, то он остается в предпросмотре
+
+Uncaught Error: Load timeout for modules: fire_flies_bus fire_flies_views_outbox_card order!swarm 
+http://requirejs.org/docs/errors.html#timeout
+
+У лехи часто возникает
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has'
+1101require.694528.js:30
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has' backbone_src.js:260
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has' 341 require.694528.js:30
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has' draw_page.js:83 save
+77require.694528.js:30
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has' send_with_save_popupjs:26save model 
+Object
+106require.694528.js:30
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has'
+backbone_src.js:260
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has'
+389require.694528.js:30
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has'
+Uncaught TypeError: Object function (a){return new n(a)} has no method 'has'
+206
+require.694528.js:30Uncaught TypeError: Object function (a){return new n(a)} has no method 'has'
+Uncaught TypeError: undefined is not a function

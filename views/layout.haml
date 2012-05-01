@@ -1,0 +1,85 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title= "HTML5SocApp Boilerplate"
+    = css :main
+    :javascript
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXXX-X']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      window.SynergyConfig = { 
+        version: '0.0.1' ,
+        Config: #{Social::Network(@social_type).safe_config(auth_params).to_json},
+        Env: {
+          apiClass: '#{@social_type.to_s.classify}',
+          id: #{@social_type_id},
+          type: '#{@social_type}',
+          prefix: '#{@social_prefix}',
+          Vk: {},
+          Ok: { fapi_params: {} }
+        },
+        User: {
+          remember_token: '#{@current_user.remember_token}',
+          uid: #{@current_user.uid},
+          attributes: #{@current_user.to_front.to_json},
+          id: "#{@current_user.id}",
+          real_balance: #{@current_user.real_balance},
+          game_balance: #{@current_user.game_balance},
+          haveReal: function(amount) { return #{@current_user.real_balance.to_i} >= amount; },
+          haveGame: function(amount) { return #{@current_user.game_balance.to_i} >= amount; },
+          model: {}
+        }
+      };
+
+      window.Request = {
+        params: #{@request_params}
+      };
+
+      window.AccessLog = {
+        push: function(track) {
+          try {
+            _gaq.push(['_trackPageview', track + '']);
+            if (console && console.log) {
+              console.log('track: ' + track);
+            } 
+          } catch(e) { }
+        },
+
+        pushWithEnv: function(track) {
+          this.push(SynergyConfig.Env.prefix + '/' + track + '');
+        }
+      };
+
+    = js @social_type.to_sym
+    - if ENV['APP_ENV'] == 'production'
+      - if is_opera_browser?
+        %script{ :src => "/scripts/vendor/require/require.js", :type => 'text/javascript', :"data-main" => "/scripts/main.js" }
+      - else
+        %script{ :src => "/scripts/vendor/require/require.js", :type => 'text/javascript', :"data-main" => "/javascript/main-build.#{@release_hash}.js" }
+    - else
+      = js :require, :"data-main" => "/scripts/main.js"
+  %body
+    #preloader
+      .process Loading ...
+    %header
+      .title 
+        .logo Logo
+        .balance
+      %nav.top
+        %a{ :href => '#', :class => :main } Main
+        %a{ :href => '#', :class => :help } Help
+    %article
+      %section.canvas
+        %canvas{ :width => 700, :height => 700, :id => :main_canvas }
+      %section.pages
+    %section.popups
+    #footer

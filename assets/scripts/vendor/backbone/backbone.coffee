@@ -1,0 +1,1 @@
+define ['loader'], (Loader) -> Loader.Backbone
