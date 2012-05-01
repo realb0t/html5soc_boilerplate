@@ -28,5 +28,5 @@ Console
 
 Include:
 
-* Social (Backend Social API wraper)
-* Synergy (Frontend Social API wraper)
+* Social (Backend Social API wrapper)
+* Synergy (Frontend Social API wrapper)
