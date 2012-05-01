@@ -2,6 +2,7 @@ HTML5 SocialApplication Boilerplate
 ====================
 
 Sinatra + Mongoid + BackboneJS + RequireJS + JQuery
+Ready deploy to Heroku.
 
 Install:
 ---------------------
@@ -30,3 +31,20 @@ Include:
 
 * Social (Backend Social API wrapper)
 * Synergy (Frontend Social API wrapper)
+
+Deploy
+-----------------------
+
+Add heroku repository path:
+
+	$ git remote add heroku <HEROKU REPO PATH>
+
+Create release:
+
+	$ rake deploy:front
+	$ git add .
+	$ git commit -am 'release_XXXX_XX_XX_XXXX'
+
+Deploy on Heroku:
+
+	$ git push heroku master
