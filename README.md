@@ -7,11 +7,20 @@ Ready deploy to Heroku.
 Install:
 ---------------------
 
-Need ruby 1.9.2
+Need:
+
+* ruby 1.9.2-head and bundler [with rvm]
+* nodejs
+* npm
+* mongodb
+* postgresql
+
+Run:
 
 	$ git clone git@github.com:realb0t/html5soc_boilerplate.git
 	$ cd html5soc_boilerplate
     $ bundle install
+    $ npm install -g requirejs
 
 Run:
 ---------------------
