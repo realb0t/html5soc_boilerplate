@@ -22,11 +22,11 @@ define [
         
         $('#preloader').animate { opacity: 0 }, 700, () -> $('#preloader').hide()
 
-        Detector.context3d
+        Detector.supportContext3d
           success: () -> AccessLog.pushWithEnv('Context3dSupport')
           failure: () -> AccessLog.pushWithEnv('Context3dUnsupport')
 
-        Detector.context2d
+        Detector.supportContext2d
           success: () ->
               AccessLog.pushWithEnv('Context2dSupport')
               router = new Routers.Support() 
