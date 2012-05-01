@@ -83,7 +83,7 @@ define [
       FAPI.UI.setWindowSize(730, $(document.body).height()) if FAPI.initialized
 
     invite: () ->
-      FAPI.UI.showInvite('Отправляйте магические открытки!')
+      FAPI.UI.showInvite('Welcome')
 
     getInfo: (uids, callback) ->
       request_param = 

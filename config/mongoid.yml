@@ -2,13 +2,13 @@ development:
   username:
   password:
   host: localhost
-  database: fireflies_development
+  database: html5soc_development
 
 test:
   username:
   password:
   host: localhost
-  database: fireflies_test
+  database: html5soc_test
 
 # set these environment variables on your prod server
 production:

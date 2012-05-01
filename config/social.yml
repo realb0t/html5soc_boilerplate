@@ -14,14 +14,14 @@ ok:
     secret_key: ''
 vk:
   production:
-    key: "9nHMiYy1ELb4uL1q0XU2"
-    app_id: 2875385
+    key: ""
+    app_id: 1
   staging:
-    key: "9nHMiYy1ELb4uL1q0XU2"
-    app_id: 2875385
+    key: ""
+    app_id: 1
   vk_staging:
-    key: "9nHMiYy1ELb4uL1q0XU2"
-    app_id: 2875385
+    key: ""
+    app_id: 1
   development:
-    key: "9nHMiYy1ELb4uL1q0XU2"
-    app_id: 2875385
+    key: ""
+    app_id: 1
